@@ -1,0 +1,15 @@
+2025-12-05 18:16:36, MOVE, v:1, k:poo@zoo, mode:DOWN
+2025-12-05 18:18:35, MOVE, v:1, k:poo@zoo, mode:PICK
+2025-12-05 18:18:36, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:0, size:2
+2025-12-05 18:18:46, MOVE, v:1, k:poo@zoo, mode:BACK
+2025-12-05 18:43:39, MOVE, v:1, k:poo@zoo, mode:PICK
+2025-12-05 18:43:40, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:0, size:14
+2025-12-05 18:43:43, MOVE, v:1, k:poo@zoo, mode:BACK
+2025-12-05 19:09:42, MOVE, v:1, k:poo@zoo, mode:PICK
+2025-12-05 19:09:43, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:0, size:63
+2025-12-05 19:10:15, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:0, size:63
+2025-12-05 19:10:51, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:0, size:63
+2025-12-05 19:11:22, EXEC, v:1, k:poo@zoo, mode:FREE
+2025-12-05 19:21:33, MOVE, v:1, k:poo@zoo, mode:PICK
+2025-12-05 19:21:34, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:0, size:65
+2025-12-05 19:21:48, MOVE, v:1, k:poo@zoo, mode:BACK
