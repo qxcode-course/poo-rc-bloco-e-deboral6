@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-06_18-05-38",
+            "content": "@@ -56,588 +56,4 @@\n C):%0A\n-    def __init__(self, valor: float, descricao: str):%0A        self.valor = valor%0A        self.descricao = descricao%0A%0A    def resumo(self):%0A        print(f%22Pagamento de R$ %7Bself.valor%7D: %7Bself.descricao%7D%22)%0A%0A    def validar_valor(self):%0A        if self.valor %3C= 0:%0A            raise ValueError%0A    %0A    @abstractmethod%0A    def processar(self):%0A        pass%0A%0Aclass CartaoCredito(Pagamento):%0A    def __init__(self, valor, descricao, numero, nome_titular, limite_disponivel):%0A        super().__init__(valor, descricao)%0A        self.numero = numero%0A        self.nome_titular = nome_titular%0A%0A\n",
+            "lines": "3"
+        },
+        {
+            "label": "2025-12-06_18-16-46",
+            "content": "@@ -346,44 +346,8 @@\n rror\n-(f%22O valor deve ser maior que zero%22)\n %0A   \n@@ -639,363 +639,5 @@\n lar%0A\n-        self.limite_disponivel = limite_disponivel%0A%0A    def processar(self):%0A        if self.valor %3E self.limite_disponivel:%0A            raise Exception(f%22Erro: Limite isuficiente no cart%C3%A3o %7Bself.numero%7D%22)%0A        else:%0A            self.limite_disponivel -= self.valor%0A%0Aclass Pix(Pagamento):%0A    def __init__(self, valor, descri%C3%A7ao, chave, banco):%0A        %0A%0A\n %0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2025-12-06_18-26-40",
+            "content": "from abc import ABC, abstractmethod\n\nclass Pagamento(ABC):\n    def __init__(self, valor: float, descricao: str):\n        self.valor = valor\n        self.descricao = descricao\n\n    def resumo(self):\n        print(f\"Pagamento de R$ {self.valor}: {self.descricao}\")\n\n    def validar_valor(self):\n        if self.valor <= 0:\n            raise ValueError(f\"O valor deve ser maior que zero\")\n    \n    @abstractmethod\n    def processar(self):\n        pass\n\nclass CartaoCredito(Pagamento):\n    def __init__(self, valor, descricao, numero, nome_titular, limite_disponivel):\n        super().__init__(valor, descricao)\n        self.numero = numero\n        self.nome_titular = nome_titular\n        self.limite_disponivel = limite_disponivel\n\n    def processar(self):\n        if self.valor > self.limite_disponivel:\n            raise Exception(f\"Erro: Limite isuficiente no cart\u00e3o {self.numero}\")\n        else:\n            self.limite_disponivel -= self.valor\n\nclass Pix(Pagamento):\n    def __init__(self, valor, descri\u00e7ao, chave, banco):\n        \n\n\n",
+            "lines": "36"
+        }
+    ]
+}

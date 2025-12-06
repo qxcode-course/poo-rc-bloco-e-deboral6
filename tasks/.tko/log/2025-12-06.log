@@ -1,0 +1,13 @@
+2025-12-06 17:59:25, MOVE, v:1, k:poo@pagamento, mode:DOWN
+2025-12-06 18:05:37, MOVE, v:1, k:poo@pagamento, mode:PICK
+2025-12-06 18:05:38, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0, size:3
+2025-12-06 18:16:46, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:100, size:24
+2025-12-06 18:16:48, MOVE, v:1, k:poo@pagamento, mode:BACK
+2025-12-06 18:26:39, MOVE, v:1, k:poo@pagamento, mode:PICK
+2025-12-06 18:26:40, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0, size:36
+2025-12-06 18:26:41, MOVE, v:1, k:poo@pagamento, mode:BACK
+2025-12-06 18:40:28, MOVE, v:1, k:poo@pagamento, mode:PICK
+2025-12-06 18:40:29, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0
+2025-12-06 18:40:30, MOVE, v:1, k:poo@pagamento, mode:BACK
+2025-12-06 18:43:01, MOVE, v:1, k:poo@pagamento, mode:PICK
+2025-12-06 18:43:03, MOVE, v:1, k:poo@pagamento, mode:BACK
