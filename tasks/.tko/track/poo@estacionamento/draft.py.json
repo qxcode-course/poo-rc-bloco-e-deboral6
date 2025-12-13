@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-13_16-06-34",
+            "content": "@@ -1,250 +0,0 @@\n-from abc import ABC, abstractmethod%0A%0Aclass Veiculo(ABC):%0A    def __init__(self, id: str, entrada: int, tipo: str):%0A        self.id = id%0A        self.entrada = entrada%0A        self.tipo = tipo%0A%0A    @abstractmethod%0A    def calcularValor():%0A        pass\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-12-13_16-33-31",
+            "content": "@@ -190,83 +190,8 @@\n po%0A%0A\n-    def setEntrada(self, horaEntrada: int):%0A%0A    def getEntrada() -%3E int:%0A%0A\n     \n",
+            "lines": "11"
+        },
+        {
+            "label": "2025-12-13_16-38-38",
+            "content": "from abc import ABC, abstractmethod\n\nclass Veiculo(ABC):\n    def __init__(self, id: str, entrada: int, tipo: str):\n        self.id = id\n        self.entrada = entrada\n        self.tipo = tipo\n\n    def setEntrada(self, horaEntrada: int):\n\n    def getEntrada() -> int:\n\n    @abstractmethod\n    def calcularValor():\n        pass",
+            "lines": "15"
+        }
+    ]
+}
