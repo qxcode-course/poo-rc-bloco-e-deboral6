@@ -1,10 +1,5 @@
 from abc import ABC, abstractmethod
 
-class Metodo(ABC):
-    @abstractmethod
-    def realizar_pagamento(self, descricao, 1valor: float):
-        pass
-
 class Pagamento(ABC):
     def __init__(self, valor: float, descricao: str):
         self.valor = valor
@@ -30,27 +25,49 @@ class CartaoCredito(Pagamento):
 
     def processar(self):
         if self.valor > self.limite_disponivel:
-            raise Exception(f"Erro: Limite isuficiente no cartão {self.numero}")
+            raise Exception(f"Erro: Limite insuficiente no cartão {self.numero}")
         else:
             self.limite_disponivel -= self.valor
-            print(f"Pagamento no cartao, no valor de {self.valor}")
+            print(f"Pagamento aprovado no cartão {self.nome_titular}. Limite restante: {self.limite_disponivel}")
 
 class Pix(Pagamento):
-    def __init__(self, valor, descriçao, chave, banco):
+    def __init__(self, valor, descricao, chave, banco):
         super().__init__(valor, descricao)
         self.chave = chave
         self.banco = banco
 
     def processar(self):
-        print(f"Pagando pix produto {self.descricao} para {self.chave} do banco {self.banco} no valor de {self.valor}")
+        print(f"PIX enviado via {self.banco} usando chave {self.chave}")
 
 class Boleto(Pagamento):
     def __init__(self, valor, descricao, codigo_barras: int, vencimento):
-        super().__init__(valor, descriçao)
+        super().__init__(valor, descricao)
         self.codigo_barras = codigo_barras
         self.vencimento = vencimento
 
     def processar(self):
+        print("Boleto gerado. Aguardando pagamento...")
+
+def processar_pagamento(pagamento: Pagamento):
+    try:
+        pagamento.validar_valor()
+        pagamento.resumo()
+        pagamento.processar()
+    except Exception as erro:
+        print(f"Erro: {erro}")
+
+pagamentos = [
+    Pix(150, "Camisa esportiva", "email@ex.com", "Banco XPTO"),
+    CartaoCredito(400, "Tênis esportivo", "1234 5678 9123 4567", "Cliente X", 500),
+Boleto(89.90, "Livro de Python", "123456789000", "2025-01-10"),
+CartaoCredito(800, "Notebook", "9999 8888 7777 6666", "Cliente Y", 700),
+]
+for pagamento in pagamentos:
+    processar_pagamento(pagamento)
+    print()
+
+
+
 
         
 
