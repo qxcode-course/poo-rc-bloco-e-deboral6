@@ -1,0 +1,7 @@
+2025-12-20 17:49:27, MOVE, v:1, k:poo@cadastro, mode:DOWN
+2025-12-20 17:50:36, MOVE, v:1, k:poo@cofre, mode:DOWN
+2025-12-20 17:51:14, MOVE, v:1, k:poo@cofre, mode:PICK
+2025-12-20 17:51:15, EXEC, v:1, k:poo@cofre, mode:FULL, rate:0, size:0
+2025-12-20 17:51:17, MOVE, v:1, k:poo@cofre, mode:BACK
+2025-12-20 18:28:23, MOVE, v:1, k:poo@cofre, mode:PICK
+2025-12-20 18:28:25, MOVE, v:1, k:poo@cofre, mode:BACK

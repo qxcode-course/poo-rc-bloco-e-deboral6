@@ -1,0 +1,9 @@
+2025-12-21 00:51:01, MOVE, v:1, k:poo@cofre, mode:PICK
+2025-12-21 00:51:02, EXEC, v:1, k:poo@cofre, mode:FULL, rate:0
+2025-12-21 00:51:03, MOVE, v:1, k:poo@cofre, mode:BACK
+2025-12-21 01:17:10, MOVE, v:1, k:poo@cofre, mode:PICK
+2025-12-21 01:17:11, EXEC, v:1, k:poo@cofre, mode:FULL, rate:0, size:46
+2025-12-21 01:17:13, MOVE, v:1, k:poo@cofre, mode:BACK
+2025-12-21 01:46:29, MOVE, v:1, k:poo@cofre, mode:PICK
+2025-12-21 01:46:30, EXEC, v:1, k:poo@cofre, mode:FULL, rate:0, size:94
+2025-12-21 01:46:32, MOVE, v:1, k:poo@cofre, mode:BACK
